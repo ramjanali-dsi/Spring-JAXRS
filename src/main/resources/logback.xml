@@ -3,7 +3,7 @@
         <target>System.out</target>
         <encoder>
             <!--%d{"yyyy-MM-dd'T'HH:mm:ss,SSS"}-->
-            <pattern>%blue(%d{"HH:mm:ss.SSSXXX"})|%22.22thread|%yellow(%-5level)|%green(%26.26logger.%-30.30M \(%4line\))|%msg%n</pattern>
+            <pattern>%blue(%d{"hh:mm:ss.SSSXXX"})|%yellow(%-5level)|%green(%26.26logger.%-30.30M \(%4line\))|%msg%n</pattern>
         </encoder>
     </appender>
 
