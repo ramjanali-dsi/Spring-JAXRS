@@ -1,6 +1,7 @@
 
 package com.aliashik.service.impl;
 
+import com.aliashik.dao.GeeetingDao;
 import com.aliashik.service.GreetingService;
 import org.apache.log4j.Logger;
 import org.hibernate.SessionFactory;
@@ -8,17 +9,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class FrenchGreetingService implements GreetingService {
+public class GreetingServiceImpl implements GreetingService {
 
     @Autowired
     private Logger logger;
 
     @Autowired
-    private SessionFactory sessionFactory;
-    
+    private GeeetingDao geeetingDao;
+
     @Override
     public String getGreeting(String name) {
-        logger.info("service method is executing");
-        return "Bonjour, " + name + "!";
+        logger.info("Service method is executing");
+        return geeetingDao.getGreeting(name);
     }  
 }
